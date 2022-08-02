@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+/* class to construct the node */
 class node{
     public:
     int data;
@@ -11,6 +12,7 @@ class node{
     }
 };
 
+/* This function will insert the node at the head of the linked list */
 void insertAtHead(node* &head, int val){
     node* n = new node(val);
     if(head == NULL){
@@ -21,6 +23,7 @@ void insertAtHead(node* &head, int val){
     head = n;
 }
 
+/* This function insert the node at the tail of the linked list */
 void insertAtTail(node* &head, int val){
     node* n = new node(val);
     node* temp = head;
@@ -36,6 +39,7 @@ void insertAtTail(node* &head, int val){
     temp->next = n;
 }
 
+/* This function will print the linked list */
 void printLinkedList(node* head){
     while(head != NULL){
         cout<<head->data<<"   --->    ";
